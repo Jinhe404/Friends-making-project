@@ -1,0 +1,29 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/partner?serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+  # swagger\u914D\u7F6E
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  mail:
+    # ?? SMTP ?????
+    host: smtp.qq.com
+    # ?????
+    username: 1938976892@qq.com
+    # ??????????????????????????
+    password: syrptpikhdzdcbhc
+    # ???465?587
+    port: 587
+    # ????????UTF-8
+    default-encoding: UTF-8
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
